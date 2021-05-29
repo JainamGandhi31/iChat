@@ -1,0 +1,3 @@
+font size h1: 20px
+btn width : 16%
+input text: width 46%

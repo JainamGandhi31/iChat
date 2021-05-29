@@ -1,0 +1,30 @@
+
+#navbar h1{
+    font-size: 20px;
+}
+
+#chat_container{
+  max-width: 90%;
+     
+ }
+
+#inputmsg{
+    width: 66%;
+}
+
+
+#sendbtn{
+  width: 16%;
+    
+}
+
+footer{
+    font-size: 14px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 350px) {
+    footer{
+        font-size: 11px;
+    }
+  }
