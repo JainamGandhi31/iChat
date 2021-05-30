@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: url(../image/body_bg.jpg) no-repeat center center/cover;
+    background: url(./image/body_bg.jpg) no-repeat center center/cover;
     height: 100vh;
 }
 #navbar{
@@ -28,7 +28,7 @@ body{
     max-width: 70%;
     margin: auto;
     height: 65vh;
-    background: url(../image/bg.jpg) no-repeat center center fixed;
+    background: url(./image/bg.jpg) no-repeat center center fixed;
     background-size: cover;
     overflow-y: auto;
     overscroll-behavior: auto;
