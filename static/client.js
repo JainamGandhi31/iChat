@@ -1,5 +1,5 @@
 const port = process.env.PORT ||8000;
-const socket = io(`http://localhost:${port}`);
+const socket = io();
 
 
 //Get DOM elements in respective JS variables.

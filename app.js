@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require('fs');
 
 
-const port = process.env.PORT ||80;
+const port = process.env.PORT || 8000;
 
 //EXPRESS SPECIFIC STUFF
 app.use('/static',express.static('static'));  //For serving static files
