@@ -1,6 +1,4 @@
-const port = process.env.PORT ||8000;
-const socket = io();
-
+const socket = io('http://localhost:8000');
 
 //Get DOM elements in respective JS variables.
 
@@ -8,6 +6,9 @@ const form = document.getElementById('message_send');
 const messageInput = document.getElementById('inputmsg');
 const chatContainer = document.getElementById('chat_container');
 
+function scrollToBottom() {
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+  }
 
 var audio = new Audio('alert.mp3');
 
@@ -21,10 +22,13 @@ const append = (defaultmessage, position)=>{
     messageElement.classList.add('message');
     messageElement.classList.add(position);
     chatContainer.append(messageElement)
+    // autoscroll();
     if(position == 'leftmsg')
     {
         audio.play();
     }
+
+    scrollToBottom();
 }
 
 //If a new user joins let the server know

@@ -30,9 +30,8 @@ body{
     height: 65vh;
     background: url(./image/bg.jpg) no-repeat center center fixed;
     background-size: cover;
-    overflow-y: auto;
-    overscroll-behavior: auto;
-    /* box-shadow: 5px 5px 5px gray; */
+    overflow-y: scroll;
+
 
     
 }

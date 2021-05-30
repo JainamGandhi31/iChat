@@ -5,30 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iChat App</title>
-    <link rel="stylesheet" href="../static/style.css">
-    <link rel="stylesheet" media="screen and (max-width:650px)" href="../static/phone.css">
+    <link rel="stylesheet" type="text/css" href="/public/style.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:650px)" href="/public/phone.css">
     <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
-    <script defer src="../static/client.js"></script>
+    <script defer src="/public/client.js"></script>
+
 </head>
 <body>
     <nav id="navbar">
-        <img src="../static/image/icon.jpg" alt="logo.jpg" id="logoimg">
+        <img src="./public/image/icon.jpg" alt="logo.jpg" id="logoimg">
         <h1>Welcome to MYchat app</h1>
     </nav>
+    
+    
+        <div id="chat_container">
+            
+        </div>
 
-    <div id="chat_container">
-        
-    </div>
-
+    
+    
     <div id="sendmsg">
         <form action="#" id="message_send">
             <input type="text" name="inputmsg" id="inputmsg">
             <button id="sendbtn" type="submit" >Send</button>
         </form>
     </div>
-
+    
     <footer>
         <h4>Copyright &copy; 2021 MYchatapp.com | All rights reserved.</h4>
     </footer>
+
 </body>
 </html>

@@ -1,24 +1,21 @@
 {
-  "name": "project-5_chat_app",
+  "name": "nodeserver",
   "version": "1.0.0",
-  "description": "This is my first chat application",
-  "main": "app.js",
+  "description": "This is node server for our chat application",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JainamGandhi31/mychat.git"
-  },
-  "author": "",
+  "keywords": [
+    "chat",
+    "app"
+  ],
+  "author": "Jainam Gandhi",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JainamGandhi31/mychat/issues"
-  },
-  "homepage": "https://github.com/JainamGandhi31/mychat#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.2"
+    "play-sound": "^1.1.3",
+    "socket.io": "^4.1.2"
   }
 }
