@@ -6,6 +6,51 @@ const io = require('socket.io')( (port), {
     }
   });
 
+const users = {};
+
+io.on('connection', socket =>{
+//If new user joins let other users of server know
+    socket.on('new-user-joined', name=>{
+        users[socket.id] = name;
+        socket.broadcast.emit('user-joined',name);
+
+    });
+
+    //If someone sends the message, broadcas it to other people 
+    socket.on('send', message=>{
+        socket.broadcast.emit('receive',{ message: message, name: users[socket.id] });
+    });
+
+
+    //If someone leaves the chat let others know
+    socket.on('disconnect', ()=>{
+        socket.broadcast.emit('left',users[socket.id]);
+        delete(users[socket.id]);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// server.listen(PORT,()=>{
+//     console.log(`Listening on ${PORT}`);
+// })
+
+
+
 // 'use strict';
 
 // const express = require('express');
@@ -44,31 +89,3 @@ const io = require('socket.io')( (port), {
 
 
 // const io = socketIO(server);
-
-
-const users = {};
-
-io.on('connection', socket =>{
-//If new user joins let other users of server know
-    socket.on('new-user-joined', name=>{
-        users[socket.id] = name;
-        socket.broadcast.emit('user-joined',name);
-
-    });
-
-    //If someone sends the message, broadcas it to other people 
-    socket.on('send', message=>{
-        socket.broadcast.emit('receive',{ message: message, name: users[socket.id] });
-    });
-
-
-    //If someone leaves the chat let others know
-    socket.on('disconnect', ()=>{
-        socket.broadcast.emit('left',users[socket.id]);
-        delete(users[socket.id]);
-    });
-});
-
-// server.listen(PORT,()=>{
-//     console.log(`Listening on ${PORT}`);
-// })
