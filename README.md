@@ -34,7 +34,7 @@ Click on this link: https://youtu.be/CCKsmnmNPsM
 To deploy this project run,
 
 ```bash
-  node index.js
+node index.js
 ```
 
 Now open the live server and you will be able to use the iChat web app.
