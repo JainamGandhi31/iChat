@@ -1,7 +1,7 @@
 
 # iChat
 
-iChat is a Real Time Chat Web Application created using Node.js and Socket.io.
+iChat is a Real Time Chat Web Application. 
 In this application, multiple users can connect and chat with each other at
 the same time. It will notify all other users when a new user joins and also
 when any user leaves the chat.
